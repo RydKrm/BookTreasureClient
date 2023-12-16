@@ -26,7 +26,7 @@ const AddCategory = ({ categoryList }) => {
                 const categoryObject = {
                     category: categoryName,
                 }
-                axios.post('http://localhost:5000/addCategory', categoryObject)
+                axios.post('https://book-treasure-server-app.vercel.app/addCategory', categoryObject)
                     .then((res) => {
                         if (res.data.status) {
                             Swal.fire({

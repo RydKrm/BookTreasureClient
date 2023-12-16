@@ -8,7 +8,7 @@ export default function PrevousOrder() {
   const {userId} = useUserInfo()
 
   useEffect(()=>{
-    axios.post('http://localhost:5000/getPrevousOrder',{userId})
+    axios.post('https://book-treasure-server-app.vercel.app/getPrevousOrder',{userId})
     .then(res=>setBookList(res.data))
     .catch(err=>console.log(err))
   },[userId])

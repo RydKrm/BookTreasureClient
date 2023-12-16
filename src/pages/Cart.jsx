@@ -19,7 +19,7 @@ const Cart = () => {
 
         const completeOrder = () => {
     axios
-      .post("http://localhost:5000/addCompleteOrder", { productList, userId })
+      .post("https://book-treasure-server-app.vercel.app/addCompleteOrder", { productList, userId })
       .then((res) => {
         if (res.data.status) {
           navigate('/checkout')
@@ -63,7 +63,7 @@ const Cart = () => {
 
   const deleteProduct = (productId) => {
     axios
-      .post("http://localhost:5000/deleteCartItem", { productId })
+      .post("https://book-treasure-server-app.vercel.app/deleteCartItem", { productId })
       .then((res) => {
         if (res.data.status) {
           Swal.fire({
@@ -82,7 +82,7 @@ const Cart = () => {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/findCartItem", { userId })
+      .post("https://book-treasure-server-app.vercel.app/findCartItem", { userId })
       .then((res) => {
         const allData = res.data;
         const newData = allData.map((data) => ({ ...data, quantity: 1 }));

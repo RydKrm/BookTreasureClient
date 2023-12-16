@@ -7,7 +7,7 @@ export default function AdminBookApprove() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getAdminApprovedBook")
+      .get("https://book-treasure-server-app.vercel.app/getAdminApprovedBook")
       .then((res) => {
         setBookList(res.data);
         // console.log("book list ",res.data);
@@ -17,7 +17,7 @@ export default function AdminBookApprove() {
 
   const updateRequest = (id, status) => {
     axios
-      .post("http://localhost:5000/bookStatusUpdate", { id, status })
+      .post("https://book-treasure-server-app.vercel.app/bookStatusUpdate", { id, status })
       .then((res) => {
         if (res.data.status) {
           if (status === "accept")

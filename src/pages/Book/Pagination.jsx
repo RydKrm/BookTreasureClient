@@ -8,7 +8,7 @@ const DonationPagenation = () => {
     const [totalBook, setTotalBook] = useState(null);
   
     useEffect(()=>{
-      axios.get('http://localhost:5000/getTotalBook')
+      axios.get('https://book-treasure-server-app.vercel.app/getTotalBook')
       .then(res=>setTotalBook(res.data.totalBook))
       .catch(err=>console.log(err))
     },[])

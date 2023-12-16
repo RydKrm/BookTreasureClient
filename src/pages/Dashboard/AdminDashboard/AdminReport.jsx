@@ -21,7 +21,7 @@ export default function AdminReport() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getReport")
+      .get("https://book-treasure-server-app.vercel.app/getReport")
       .then((res) => {
         setBookList(res.data);
         // console.log('report ', res.data);

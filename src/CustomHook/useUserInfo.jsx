@@ -8,7 +8,7 @@ const useUserInfo = ()=>{
    //Effect
      useEffect(()=>{ 
        if(user){  
-          axios.post('http://localhost:5000/findUserByEmail',{'email':user?.email})
+          axios.post('https://book-treasure-server-app.vercel.app/findUserByEmail',{'email':user?.email})
     .then(res=>{
         setUserInfo(res.data);
          // console.log("user info  ",res.data);

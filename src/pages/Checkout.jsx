@@ -21,7 +21,7 @@ const Checkout = () => {
 
     useEffect(() => {
     axios
-      .post("http://localhost:5000/getCheckoutList", { userId })
+      .post("https://book-treasure-server-app.vercel.app/getCheckoutList", { userId })
       .then((res) => {
         setProductList(res.data);
       })
@@ -40,7 +40,7 @@ const Checkout = () => {
   //     const completeOrder = () => {
   //   setLoading(true);
   //   axios
-  //     .post("http://localhost:5000/addCompleteOrder", { productList, userId })
+  //     .post("https://book-treasure-server-app.vercel.app/addCompleteOrder", { productList, userId })
   //     .then((res) => {
   //       if (res.data.status) {
   //         Swal.fire({
@@ -64,7 +64,7 @@ const Checkout = () => {
      const invoice = uuidv4();
      const date = new Date()
      console.log('address ', values)
-    axios.post('http://localhost:5000/addAddress',{...values,userId,invoiceId:invoice,date})
+    axios.post('https://book-treasure-server-app.vercel.app/addAddress',{...values,userId,invoiceId:invoice,date})
     .then(res => {
         if(res.status){ 
            navigate('/invoice')

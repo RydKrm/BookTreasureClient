@@ -7,7 +7,7 @@ export default function SupplierBookApprove() {
     const [bookList,setBookList] = useState([]);
 
     useEffect(() =>{
-       axios.get('http://localhost:5000/getsupplierApprovedBook')
+       axios.get('https://book-treasure-server-app.vercel.app/getsupplierApprovedBook')
        .then(res=>{
           setBookList(res.data);
        })
@@ -15,7 +15,7 @@ export default function SupplierBookApprove() {
     })
 
     const updateRequest = (id,status)=>{
-        axios.post('http://localhost:5000/bookStatusUpdate',{id,status})
+        axios.post('https://book-treasure-server-app.vercel.app/bookStatusUpdate',{id,status})
         .then(res=>{
           if(res.data.status){
             if(status==='accept')

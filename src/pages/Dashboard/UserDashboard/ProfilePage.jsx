@@ -9,7 +9,7 @@ export default function ProfilePage() {
     const [loading,setLoading] = useState(true);
 
     useEffect(()=>{
-        axios.post('http://localhost:5000/getUserInfo',{userId})
+        axios.post('https://book-treasure-server-app.vercel.app/getUserInfo',{userId})
         .then((res)=>{
             setUserInfo(res.data);
             setLoading(false);

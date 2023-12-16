@@ -6,7 +6,7 @@ export default function BookCollection(type) {
   const [bookList,setBookList] = useState([]);
 
   useEffect(()=>{
-    axios.post('http://localhost:5000/getBookCollection',type)
+    axios.post('https://book-treasure-server-app.vercel.app/getBookCollection',type)
     .then(res=>setBookList(res.data))
     .catch(err=>console.log(err))
   },[type])

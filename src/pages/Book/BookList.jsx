@@ -12,7 +12,7 @@ export default function BookList() {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/getBookData", state)
+      .post("https://book-treasure-server-app.vercel.app/getBookData", state)
       .then((res) => setBookData(res.data))
       .catch((err) => console.log(err));
   }, [state]);

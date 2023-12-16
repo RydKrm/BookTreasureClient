@@ -28,7 +28,7 @@ const Product = ({ item }) => {
     }
     // console.log("data => ",data)
     axios
-      .post("http://localhost:5000/addToCart", data)
+      .post("https://book-treasure-server-app.vercel.app/addToCart", data)
       .then((res) => {
         // console.log("user data => ",res.data)
         if (res.data.status) {

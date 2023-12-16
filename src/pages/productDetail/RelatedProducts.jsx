@@ -7,7 +7,7 @@ const RelatedProducts = ({category}) => {
 
   const [bookList,setBookList] = useState([]);
 
-  axios.post('http://localhost:5000/getRelatedBook',{category})
+  axios.post('https://book-treasure-server-app.vercel.app/getRelatedBook',{category})
   .then(res=>setBookList(res.data))
   .catch(err=>console.log(err));
 

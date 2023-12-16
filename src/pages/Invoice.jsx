@@ -18,7 +18,7 @@ const Invoice = () => {
   );
 
     useEffect(()=>{
-        axios.post('http://localhost:5000/getAddress',{userId})
+        axios.post('https://book-treasure-server-app.vercel.app/getAddress',{userId})
         .then(res=>setAddress(res.data))
         .catch(err=>console.log(err));
     },[userId]);
@@ -26,7 +26,7 @@ const Invoice = () => {
     useEffect(()=>{
      axios
        axios
-      .post("http://localhost:5000/getCheckoutList", { userId })
+      .post("https://book-treasure-server-app.vercel.app/getCheckoutList", { userId })
       .then((res) => {
         setProductList(res.data);
       })

@@ -11,7 +11,7 @@ const LeftSideBar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getAllCategory")
+      .get("https://book-treasure-server-app.vercel.app/getAllCategory")
       .then((res) => {
         setAllCategory(res.data);
       })

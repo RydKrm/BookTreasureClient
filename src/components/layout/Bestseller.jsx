@@ -9,7 +9,7 @@ const BestSeller = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getBestSellerBookList")
+      .get("https://book-treasure-server-app.vercel.app/getBestSellerBookList")
       .then((res) => {
         setBookList(res.data);
       })

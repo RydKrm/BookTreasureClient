@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const [quantity,setQuantity] = useState(1);
 
   useEffect(()=>{
-    axios.post('http://localhost:5000/getProductDetails',{productId})
+    axios.post('https://book-treasure-server-app.vercel.app/getProductDetails',{productId})
     .then(res=>{setBook(res.data)})
     .catch(err=> console.log(err))
   },[productId]);
@@ -39,7 +39,7 @@ const ProductDetails = () => {
         productId: productId,
         quantity:quantity
       }
-      axios.post('http://localhost:5000/addToCart',data)
+      axios.post('https://book-treasure-server-app.vercel.app/addToCart',data)
       .then(res=>{
         if(res.data.status){
           Swal.fire({

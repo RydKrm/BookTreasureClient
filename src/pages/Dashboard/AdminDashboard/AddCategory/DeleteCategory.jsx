@@ -9,7 +9,7 @@ const DeleteCategory = () => {
     const [allCategory, setAllCategory] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/getAllCategory")
+        axios.get("https://book-treasure-server-app.vercel.app/getAllCategory")
             .then((res) => {
                 setAllCategory(res.data);
             })
@@ -30,7 +30,7 @@ const DeleteCategory = () => {
 
             const afterDelete = allCategory.filter(cat => cat._id !== id);
             setAllCategory(afterDelete);
-            axios.post("http://localhost:5000/deleteCategory", { id })
+            axios.post("https://book-treasure-server-app.vercel.app/deleteCategory", { id })
                 .then(res => {
                     console.log(res.data);
                 })

@@ -45,7 +45,7 @@ const UserSellsBook = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getAllCategory")
+      .get("https://book-treasure-server-app.vercel.app/getAllCategory")
       .then((res) => {
         setAllCategory(res.data);
       })
@@ -115,7 +115,7 @@ const UserSellsBook = () => {
             };
 
             axios
-              .post("http://localhost:5000/AddBook", bookInfo)
+              .post("https://book-treasure-server-app.vercel.app/AddBook", bookInfo)
               .then((res) => {
                 if (res.data.status) {
                   Swal.fire({

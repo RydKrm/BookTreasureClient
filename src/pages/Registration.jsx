@@ -45,7 +45,7 @@ const Registration = () => {
                   userRole:formik.values.role,
                   totalMoney:0,
                 };
-                return fetch('http://localhost:5000/users', {
+                return fetch('https://book-treasure-server-app.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

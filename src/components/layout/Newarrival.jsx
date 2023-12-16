@@ -9,7 +9,7 @@ const Newarrival = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getNewarrivalBookList")
+      .get("https://book-treasure-server-app.vercel.app/getNewarrivalBookList")
       .then((res) => {
         setBookList(res.data);
         console.log("new arrival book list", res.data);

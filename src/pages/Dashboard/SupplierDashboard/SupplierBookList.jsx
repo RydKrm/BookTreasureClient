@@ -8,7 +8,7 @@ export default function SupplierBookList() {
   const {userId} = useUserInfo()
 
   useEffect(()=>{
-    axios.post('http://localhost:5000/getDonatedBookList',{userId})
+    axios.post('https://book-treasure-server-app.vercel.app/getDonatedBookList',{userId})
     .then(res=>setBookList(res.data))
     .catch(err=>console.log(err))
   },[userId])

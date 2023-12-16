@@ -10,7 +10,7 @@ const DonarPreveusDonation = () => {
   useEffect(() => { 
     if(userId){
         axios
-      .post("http://localhost:5000/getDonatedBookList",{userId})
+      .post("https://book-treasure-server-app.vercel.app/getDonatedBookList",{userId})
       .then((res) => {
         setBookList(res.data);
       })

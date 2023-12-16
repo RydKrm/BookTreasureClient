@@ -10,7 +10,7 @@ export default function DeliveryProduct() {
   //console.log('book list ', bookList)
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/getAdminDeliveryList')
+    axios.get('https://book-treasure-server-app.vercel.app/getAdminDeliveryList')
     .then(res=>setBookList(res.data))
     .catch(err=>console.log(err))
   },[])
@@ -23,7 +23,7 @@ export default function DeliveryProduct() {
       newData2 = [...newData2,...newData];
       setBookList(newData2);
       
-      axios.post('http://localhost:5000/updateDeliveryList',{orderId:id})
+      axios.post('https://book-treasure-server-app.vercel.app/updateDeliveryList',{orderId:id})
       .then(res => {
         if(res.status){
           Swal.fire({

@@ -7,7 +7,7 @@ function EditCategory() {
   const [AllCategory, setAllCategory] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/getAllCategory")
+    axios.get("https://book-treasure-server-app.vercel.app/getAllCategory")
       .then((res) => {
         setAllCategory(res.data);
         console.log("Category Data ", res.data)
